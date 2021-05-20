@@ -34,7 +34,6 @@ class StaggeredProductCardRecyclerViewAdapter(private val productList: List<Prod
         if (productList != null && position < productList.size) {
             val product = productList[position]
             holder.productTitle.text = product.title
-            holder.productPrice.text = product.price
             ImageRequester.setImageFromUrl(holder.productImage, product.url)
         }
     }

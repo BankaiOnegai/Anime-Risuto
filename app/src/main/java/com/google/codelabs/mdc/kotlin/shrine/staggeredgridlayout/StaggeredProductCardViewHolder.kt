@@ -11,5 +11,4 @@ class StaggeredProductCardViewHolder(itemView: View) : RecyclerView.ViewHolder(i
 
     var productImage: NetworkImageView = itemView.findViewById(R.id.product_image)
     var productTitle: TextView = itemView.findViewById(R.id.product_title)
-    var productPrice: TextView = itemView.findViewById(R.id.product_price)
 }
