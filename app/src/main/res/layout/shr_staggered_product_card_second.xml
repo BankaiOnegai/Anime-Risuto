@@ -19,7 +19,7 @@
         <com.android.volley.toolbox.NetworkImageView
             android:id="@+id/product_image"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/shr_staggered_product_grid_card_height_landscape"
+            android:layout_height="213dp"
             android:background="?attr/colorPrimaryDark"
             android:scaleType="centerCrop" />
 
@@ -27,21 +27,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/product_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/shr_product_title"
+                android:textSize="12dp"
                 android:textAlignment="center"
                 android:textAppearance="?attr/textAppearanceSubtitle2" />
 
             <TextView
-                android:id="@+id/product_price"
-                android:layout_width="match_parent"
+                android:id="@+id/product_status"
+                android:layout_width="59dp"
                 android:layout_height="wrap_content"
-                android:text="@string/shr_product_description"
+                android:textSize="10dp"
+                android:text="@string/shr_product_status"
                 android:textAlignment="center"
                 android:textAppearance="?attr/textAppearanceBody2" />
         </LinearLayout>

@@ -21,9 +21,11 @@ class ProductCardRecyclerViewAdapter internal constructor(private val productLis
         if (position < productList.size) {
             val product = productList[position]
             holder.productTitle.text = product.title
+            //holder.productStatus.text = product.status
             ImageRequester.setImageFromUrl(holder.productImage, product.url)
         }
     }
+    
 
     override fun getItemCount(): Int {
         return productList.size
