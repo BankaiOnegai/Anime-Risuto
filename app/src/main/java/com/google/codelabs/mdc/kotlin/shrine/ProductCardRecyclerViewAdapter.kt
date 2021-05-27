@@ -21,7 +21,7 @@ class ProductCardRecyclerViewAdapter internal constructor(private val productLis
     override fun onBindViewHolder(holder: ProductCardViewHolder, position: Int) {
         if (position < productList.size) {
             val product = productList[position]
-            holder.productTitle.text = product.title
+            holder.productTitle.text = product.title_en
             holder.productId.text = product.id
             holder.productStatus.text = product.status
             holder.itemView.setOnClickListener(View.OnClickListener {

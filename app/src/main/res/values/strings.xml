@@ -9,6 +9,9 @@
     <string name="shr_search_title">Search</string>
     <string name="shr_product_title">Title</string>
     <string name="shr_product_status">Status</string>
+    <string name="shr_product_synopsis">Synopsis</string>
+    <string name="shr_product_nbEpisode">Nb episode</string>
+    <string name="shr_product_startDate">Start Date</string>
 
     <!-- Shrine backdrop menu labels -->
     <string name="shr_account_label">My Account</string>
