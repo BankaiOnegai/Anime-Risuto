@@ -2,7 +2,9 @@ package com.google.codelabs.mdc.kotlin.shrine
 
 import android.os.Bundle
 import android.os.StrictMode
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 
 
@@ -19,7 +21,7 @@ class MainActivity : AppCompatActivity(), NavigationHost {
         if (savedInstanceState == null) {
             supportFragmentManager
                     .beginTransaction()
-                    .add(R.id.container, LoginFragment())
+                    .add(R.id.container, ProductGridFragment())// LoginFragment())
                     .commit()
         }
     }
@@ -41,4 +43,5 @@ class MainActivity : AppCompatActivity(), NavigationHost {
 
         transaction.commit()
     }
+
 }

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/app_bar"
+                style="@style/Widget.Shrine.Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/shr_menu"
+                app:title="@string/shr_app_name" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/product_coverImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimaryDark"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="16dp">
+
+            <TextView
+                android:id="@+id/product_id"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:text=""
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/product_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/shr_product_title"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"/>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="16dp">
+
+            <TextView
+                android:id="@+id/product_titleEn"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
+                android:text="Title En"
+                android:textAppearance="?attr/textAppearanceBody2" />
+
+            <TextView
+                android:id="@+id/product_titleJp"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
+                android:text="Title Jp"
+                android:textAppearance="?attr/textAppearanceBody2" />
+        </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:textSize="16dp">
+
+                <TextView
+                    android:id="@+id/product_status"
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shr_product_status"
+                    android:textAppearance="?attr/textAppearanceBody2" />
+
+                <TextView
+                    android:id="@+id/product_subtype"
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:text="Subtype"
+                    android:textAppearance="?attr/textAppearanceBody2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:textSize="16dp">
+                <TextView
+                    android:id="@+id/product_start_date"
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shr_product_startDate"
+                    android:textAppearance="?attr/textAppearanceBody2" />
+
+                <TextView
+                    android:id="@+id/product_end_date"
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:text="End Date"
+                    android:textAppearance="?attr/textAppearanceBody2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:textSize="16dp">
+                <TextView
+                    android:id="@+id/product_nb_episode"
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shr_product_nbEpisode"
+                    android:textAppearance="?attr/textAppearanceBody2" />
+                <TextView
+                    android:id="@+id/product_ratingRank"
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rating Rank"
+                    android:textAppearance="?attr/textAppearanceBody2" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/product_synopsis"
+                android:paddingTop="30dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shr_product_synopsis"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textSize="16dp" />
+        </ScrollView>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
