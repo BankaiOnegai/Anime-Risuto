@@ -26,18 +26,28 @@
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/product_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:visibility="invisible" />
+
+            <TextView
                 android:id="@+id/product_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/shr_product_title"
-                android:textAppearance="?attr/textAppearanceHeadline6" />
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/product_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/shr_product_status"
-                android:textAppearance="?attr/textAppearanceBody2" />
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textSize="14dp" />
         </LinearLayout>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

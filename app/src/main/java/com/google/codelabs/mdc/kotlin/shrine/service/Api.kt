@@ -10,15 +10,6 @@ import java.io.IOException
 
 class Api {
     @GET("anime")
-    fun getAnime(id: Int): JsonObject {
-        val client = OkHttpClient()
-        val request = Request.Builder()
-                .url("https://api.jikan.moe/v3/anime/$id")
-                .build()
-        client.newCall(request).execute()
-                .use { response -> return JsonParser.parseString(response.body!!.string()).asJsonObject }
-    }
-
     fun getEpisode(id: Int): JsonObject {
         val client = OkHttpClient()
         val request = Request.Builder()
@@ -33,6 +24,21 @@ class Api {
             val client = OkHttpClient()
             val request = Request.Builder()
                     .url("https://kitsu.io/api/edge/trending/anime/")
+                    .build()
+            client.newCall(request).execute()
+                    .use { response -> return JsonParser.parseString(response.body!!.string()).asJsonObject }
+        } catch (e: IOException) {
+            println("====================")
+            println(e.message)
+        }
+        return JsonObject()
+    }
+
+    fun getAnime(id: String): JsonObject {
+        try {
+            val client = OkHttpClient()
+            val request = Request.Builder()
+                    .url("https://kitsu.io/api/edge/anime/$id")
                     .build()
             client.newCall(request).execute()
                     .use { response -> return JsonParser.parseString(response.body!!.string()).asJsonObject }

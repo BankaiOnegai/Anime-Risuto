@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), NavigationHost {
         if (savedInstanceState == null) {
             supportFragmentManager
                     .beginTransaction()
-                    .add(R.id.container, LoginFragment())
+                    .add(R.id.container, ProductGridFragment())// LoginFragment())
                     .commit()
         }
     }
