@@ -1,12 +1,16 @@
 package com.google.codelabs.mdc.kotlin.shrine.service
 
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import okhttp3.OkHttpClient
-import okhttp3.Request
+import okhttp3.*
 import retrofit2.http.GET
+import java.io.File
 import java.io.IOException
+
 
 class Api {
     @GET("anime")
@@ -19,14 +23,27 @@ class Api {
                 .use { response -> return JsonParser.parseString(response.body!!.string()).asJsonObject }
     }
 
-    fun getTrending(): JsonObject {
+    fun hasNetwork(context: Context): Boolean? {
+        var isConnected: Boolean? = false // Initial Value
+        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE)
+        val activeNetwork: NetworkInfo? = (connectivityManager as ConnectivityManager).activeNetworkInfo
+        if (activeNetwork != null && activeNetwork.isConnected)
+            isConnected = true
+        return isConnected
+    }
+
+
+    fun getTrending(context: Context?): JsonObject {
+
         try {
-            val client = OkHttpClient()
+            val client = OkHttpClient.Builder()
             val request = Request.Builder()
                     .url("https://kitsu.io/api/edge/trending/anime/")
                     .build()
-            client.newCall(request).execute()
-                    .use { response -> return JsonParser.parseString(response.body!!.string()).asJsonObject }
+            client.build().newCall(request).execute()
+                    .use {
+                        response -> return JsonParser.parseString(response.body!!.string()).asJsonObject
+                    }
         } catch (e: IOException) {
             println("====================")
             println(e.message)

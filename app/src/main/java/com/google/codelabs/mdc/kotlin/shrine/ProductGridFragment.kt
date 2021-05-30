@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.codelabs.mdc.kotlin.shrine.network.ProductEntry
 import kotlinx.android.synthetic.main.shr_product_grid_fragment.view.*
+import java.io.IOException
 
 
 class ProductGridFragment : Fragment() {
@@ -28,7 +29,7 @@ class ProductGridFragment : Fragment() {
         // Set up the RecyclerView
         view.recycler_view.setHasFixedSize(true)
         view.recycler_view.layoutManager = GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
-        val lists: List<ProductEntry> = ProductEntry.initProductEntryList()
+        val lists: List<ProductEntry> = ProductEntry.initProductEntryList(this.getContext())
         val adapter = ProductCardRecyclerViewAdapter(lists, this)
         view.recycler_view.adapter = adapter
 
