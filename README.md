@@ -35,4 +35,6 @@ Cette application contient les éléments suivant:
 
 -Systeme de recherche
 
+# Demo d'utilisation d'Anime Risuto
 
+![image](https://github.com/BankaiOnegai/Kotlin/blob/master/Capture/Record.gif)
