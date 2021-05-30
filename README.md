@@ -1,13 +1,13 @@
 # Anime Risuto
 
-Cette application à été réalisé dans le cadre du projet mobile de 3ème année au second semestre de l'ESIEA
-Ce projet à été réalisé seul par FLORIAN MORIN
+Ce projet reprend le concept de MAL (My Anime List) qui est un trackeur d'animes
+Il a été entierement réalisé par Raphael PTIT HADDAD
 
 # Utilisation d'api
 L'api utilisée dans ce projet est celle de kitsu.io disponible à cette adresse : https://kitsu.io/api/edge/
 
 # Fonctionnement de l'application
-Cette application présente tout d'abord une liste des animes populaires.
+Cette application présente tout d'abord une liste des animes populaires grâce a une requete API depuis : https://kitsu.io/api/edge/trending/anime.
 
 Une zone d'entrée de texte est disponible pour pouvoir chercher une crypto-monnaie en particulier, la recherche est lancée à l'aide du bouton "GO"
 
