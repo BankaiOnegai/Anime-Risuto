@@ -1,5 +1,6 @@
 package com.google.codelabs.mdc.kotlin.shrine.network
 
+import android.content.Context
 import com.google.codelabs.mdc.kotlin.shrine.service.Api
 import com.google.gson.JsonElement
 import com.google.gson.JsonNull
@@ -38,9 +39,9 @@ class ProductEntry(
         /**
          * Loads a raw JSON at R.raw.products and converts it into a list of ProductEntry objects
          */
-        fun initProductEntryList(): List<ProductEntry> {
+        fun initProductEntryList(context: Context?): List<ProductEntry> {
             val api = Api()
-            val data = api.getTrending().getAsJsonArray("data")
+            val data = api.getTrending(context).getAsJsonArray("data")
             val mangas: ArrayList<ProductEntry> = ArrayList()
             data.forEach {
                 mangas.add(parseProductEntry(it))
