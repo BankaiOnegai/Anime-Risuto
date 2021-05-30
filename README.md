@@ -37,4 +37,4 @@ Cette application contient les éléments suivant:
 
 # Demo d'utilisation d'Anime Risuto
 
-![gif](https://github.com/BankaiOnegai/Kotlin/blob/master/Capture/record.mp4)
+![gif](https://github.com/BankaiOnegai/Kotlin/blob/master/Capture/record.gif)
