@@ -7,7 +7,9 @@ Il a été entierement réalisé par Raphael PTIT HADDAD
 L'api utilisée dans ce projet est celle de kitsu.io disponible à cette adresse : https://kitsu.io/api/edge/
 
 # Fonctionnement de l'application
-Cette application présente tout d'abord une liste des animes populaires grâce a une requete API depuis : https://kitsu.io/api/edge/trending/anime.
+Des lors qu'on lance l'application, un ecran de login apparait
+
+Une fois connecté, l'application affiche une liste des animes populaires grâce a une requete API depuis : https://kitsu.io/api/edge/trending/anime.
 
 Plusieurs card d'animes apparaissent et peuvent etre défilée grâce a un RecyclerView.
 
