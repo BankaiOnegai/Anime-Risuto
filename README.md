@@ -9,11 +9,11 @@ L'api utilisée dans ce projet est celle de kitsu.io disponible à cette adresse
 # Fonctionnement de l'application
 Cette application présente tout d'abord une liste des animes populaires grâce a une requete API depuis : https://kitsu.io/api/edge/trending/anime.
 
-Une zone d'entrée de texte est disponible pour pouvoir chercher une crypto-monnaie en particulier, la recherche est lancée à l'aide du bouton "GO"
+Plusieurs card d'animes apparaissent et peuvent etre défilée grâce a un RecyclerView.
 
 ![image](https://github.com/Hikachhu/Crypto_Florian_Morin/blob/master/EcranAcceuil.png)
 
-une fois une crypto-monnaie sélectionnée, nous avons un écran contenant leurs détails:
+une fois un anime de selectionné, vous etes redirigé vers une page qui contient plus de détails sur l'anime
 
 ![image](https://github.com/Hikachhu/Crypto_Florian_Morin/blob/master/EcranDetail.png)
 
