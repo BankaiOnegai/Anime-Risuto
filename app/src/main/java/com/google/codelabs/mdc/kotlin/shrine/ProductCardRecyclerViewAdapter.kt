@@ -25,7 +25,7 @@ class ProductCardRecyclerViewAdapter internal constructor(private val productLis
             holder.productId.text = product.id
             holder.productStatus.text = product.status
             holder.itemView.setOnClickListener(View.OnClickListener {
-                (productGridFragment.activity as NavigationHost).navigateTo(ProductDetailsFragment(holder.productId.text.toString()), false)
+                (productGridFragment.activity as MainActivity).navigateTo(ProductDetailsFragment(holder.productId.text.toString()), true)
             })
             ImageRequester.setImageFromUrl(holder.productImage, product.url)
         }
